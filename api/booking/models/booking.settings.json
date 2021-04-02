@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "name": "Booking",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "booked_by": {
+      "type": "string",
+      "required": true
+    },
+    "booking_date": {
+      "type": "date",
+      "required": true
+    },
+    "start_time": {
+      "type": "time",
+      "required": true
+    },
+    "end_time": {
+      "type": "time",
+      "required": false
+    },
+    "table_booked": {
+      "model": "table"
+    }
+  }
+}

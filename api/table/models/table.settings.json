@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tables",
+  "info": {
+    "name": "Table"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tableNo": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "capacity": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "restaurant": {
+      "via": "tables",
+      "model": "restaurant"
+    }
+  }
+}
